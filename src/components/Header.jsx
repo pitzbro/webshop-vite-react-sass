@@ -22,7 +22,6 @@ export default function Header() {
   }, []); // <-- empty array means 'run once'
 
 
-
   return (
 
     // <header className="main-header full" ref="header">
