@@ -67,7 +67,13 @@
 
 // Buttons
 
-@mixin btn($type: regular, $bg: $clr1, $clr: $clr3, $padding: em(24px) em(44px), $hover: darken($bg, 8%)) {
+@mixin btn(
+  $type: regular,
+  $bg: $clr1,
+  $clr: $clr3,
+  $padding: em(24px) em(44px),
+  $hover: darken($bg, 8%)
+) {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
@@ -107,22 +113,27 @@
 // Type
 
 @mixin type($type: bold) {
-  // type options: 
-  // 1.bold 
-  // 2.boldCondensed 
+  // type options:
+  // 1.bold
+  // 2.boldCondensed
   // 3.condensed
   @if $type == bold {
     font-variation-settings: "wght" 430;
-  } 
-  @else if $type == boldCondensed {
+  } @else if $type == boldCondensed {
     font-variation-settings: "wght" 430, "wdth" 80;
     letter-spacing: em(6.72px);
-  } 
-  @else if $type == condensed {
+  } @else if $type == condensed {
     font-variation-settings: "wdth" 80;
     letter-spacing: em(6.72px);
-  }
-  @else if $type == light {
+  } @else if $type == light {
     font-variation-settings: "wght" 200;
+  }
+}
+
+// Teaser Mixin
+
+@mixin teaser($padding: 0) {
+  img {
+    padding: $padding;
   }
 }

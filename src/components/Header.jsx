@@ -19,7 +19,7 @@ export default function Header() {
         nav.style.position = entry.isIntersecting ? 'static' : 'fixed';
       });
     }
-  }, []); // <-- empty array means 'run once'
+  }, []); 
 
 
 
