@@ -6,16 +6,11 @@
   > .card {
     display: grid;
     align-content: space-between;
+    margin: 1px 1px 0 0;
     background-color: $clr3;
     color: $clr2;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1/ 1;
     padding: 10%;
-    margin: 1px 1px 0 0;
-
-    .card-image {
-      aspect-ratio: 1 / 0.7;
-      object-fit: contain;
-    }
 
     &:nth-child(1) {
       grid-area: c1;
@@ -25,6 +20,11 @@
     }
     &:nth-child(3) {
       grid-area: c3;
+    }
+
+    .card-image {
+      aspect-ratio: 1 / 0.7;
+      object-fit: contain;
     }
   }
 
